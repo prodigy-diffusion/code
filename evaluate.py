@@ -20,7 +20,7 @@ if __name__ == '__main__':
         from models.GDSS.utils.logger import set_log
         from models.GDSS.utils.loader import load_ckpt
         from models.GDSS.parsers.config import get_config
-        from evaluate_gdss import evaluate, evaluate_mol
+        from evals.evaluate_gdss import evaluate, evaluate_mol
         config = get_config(f"sample_{args.dataset}", seed=args.seed)
         ckpt_dict = load_ckpt(config, 'cpu')
         configt = ckpt_dict['config']
@@ -51,7 +51,7 @@ if __name__ == '__main__':
         from models.DruM.DruM_2D.utils.logger import set_log
         from models.DruM.DruM_2D.utils.loader import load_ckpt
         from models.DruM.DruM_2D.parsers.config import get_config
-        from evaluate_drum import evaluate, evaluate_mol
+        from evals.evaluate_drum import evaluate, evaluate_mol
         config = get_config(f"{args.dataset}", seed=args.seed)
         ckpt_dict = load_ckpt(config, 'cpu')
         configt = ckpt_dict['config']
@@ -81,7 +81,7 @@ if __name__ == '__main__':
         from models.GraphScoreMatching.utils.arg_helper import get_config
         from easydict import EasyDict as edict
         from models.GraphScoreMatching.utils.loading_utils import prepare_test_model
-        from evaluate_edpgnn import evaluate, evaluate_mol
+        from evals.evaluate_edpgnn import evaluate, evaluate_mol
         config_dict = get_config(args)
         config = edict(config_dict)
         config.save_dir = os.path.join(config.save_dir, 'sample')
@@ -111,7 +111,7 @@ if __name__ == '__main__':
                 results_dict = evaluate (gen_graph_list, config, CONSTR_CONFIG)
                 print (results_dict)
     elif args.model == 'DiGress':
-        from evaluate_digress import evaluate_setting
+        from evals.evaluate_digress import evaluate_setting
         log_dir = f"/nethome/ksharma323/ConstrGen_Diff/DiGress/generated_samples/{args.dataset}"
         if not os.path.exists(log_dir):
             os.makedirs(log_dir)

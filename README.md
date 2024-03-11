@@ -5,7 +5,7 @@ Supplementary code for the paper titled [Diffuse, Sample, Project: Plug-And-Play
 > **TL;DR:** We present a novel sampling strategy, named PROjected DIffusion for Graphs (PRODIGY), to control the generation of graphs under well-defined constraints from any pre-trained diffusion model.
 
 <p align="center">
-  <img src="./motivation.png" />
+  <img src="./figs/motivation.png" />
 </p>
 
 ## Requirements 
@@ -93,7 +93,7 @@ Our method's parameters can be adjusted using the `method.yaml` and we explain e
 ## Plug-and-play sampler
 
 <p align="center">
-  <img src="./pipeline.png" />
+  <img src="./figs/pipeline.png" />
 </p>
 
 Our method can work in a plug-and-play fashion upon any diffusion model. However, due to a lack of a standardized implementation of these methods, basic functional units differ in the code of these models. Thus, we update the official code of each paper to incorporate our projected sampling approach. These are provided in the separate codes within each repo that we call from the main file. The recipe of incorporation follows the following steps (until an in-house library is implemented). 

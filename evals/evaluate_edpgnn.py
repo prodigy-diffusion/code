@@ -4,7 +4,7 @@ from models.GraphScoreMatching.utils.arg_helper import load_data
 from models.GraphScoreMatching.evaluation.mmd import gaussian, gaussian_emd
 
 from project_bisection import satisfies
-from filter_constr import filtermap_constrained_graphs, filtermap_constrained_smiles
+from evals.filter_constr import filtermap_constrained_graphs, filtermap_constrained_smiles
 
 from moses.metrics.metrics import get_all_metrics
 import networkx as nx

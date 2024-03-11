@@ -9,7 +9,7 @@ import os
 import torch
 import pickle
 
-from filter_constr import filtermap_constrained_graphs, filtermap_constrained_smiles
+from evals.filter_constr import filtermap_constrained_graphs, filtermap_constrained_smiles
 
 TOTAL_MOLS = 10000
 MIN_CONSTR_P = 0

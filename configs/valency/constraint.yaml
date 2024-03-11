@@ -1,0 +1,6 @@
+constraint: Valency
+params:
+- - 4
+  - 5
+  - 2
+  - 1

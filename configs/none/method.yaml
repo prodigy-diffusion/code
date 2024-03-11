@@ -1,0 +1,14 @@
+rounding: none
+max_samples: 10000
+
+method:
+  op: proj
+  gamma: 0
+  solve_order: cpj
+add_diff_step: 0
+burnin: 0
+schedule:
+  gamma: none
+  params:
+  - 0
+eq: false

@@ -1,0 +1,3 @@
+constraint: Max-Degree
+params:
+- 21.0

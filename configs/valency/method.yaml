@@ -1,0 +1,15 @@
+add_diff_step: 0
+burnin: 0
+max_samples: 10000
+method:
+  gamma: 1.0
+  op: proj
+  solve_order: cpj
+rounding: none
+schedule:
+  gamma: poly
+  params:
+  - 0
+  - 5
+implicit: false
+eq: false

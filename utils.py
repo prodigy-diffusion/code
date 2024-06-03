@@ -57,6 +57,6 @@ def get_new_log_name(log_name):
 parser = argparse.ArgumentParser(description='constr')
 parser.add_argument('--constr_config', type=str, default='configs/none/method.yaml')
 parser.add_argument('--method_config', type=str, default='configs/none/constraint.yaml')
-args = parser.parse_known_args(sys.argv[1:])
+args, _ = parser.parse_known_args(sys.argv[1:])
 CONSTR_CONFIG = get_constraint_config(args.constr_config)
 METHOD_CONFIG = get_method_config(args.method_config)

@@ -15,6 +15,8 @@ We require installing the required libraries by the underlying model. In additio
 python setup.py install
 ```
 
+Also, install DiGress if you want to use that model by going in `models/DiGress/` and running `python setup.py install`
+
 ## How to run?
 
 ```sh
@@ -129,6 +131,10 @@ python evaluate.py --model {model_name} --dataset {dataset_name} --constraint co
 
 ## Citation
 
-> {
->   
+> @inproceedings{sharma2024diffuse,<br/>
+>    title={Diffuse, Sample, Project: Plug-And-Play Controllable Graph Generation},<br/>
+>    author={Sharma, Kartik and Kumar, Srijan and Trivedi, Rakshit},<br/>
+>    booktitle={Forty-first International Conference on Machine Learning},<br/>
+>    year={2024},<br/>
+>    url={https://openreview.net/forum?id=ia0Z8d1DbY}<br/>
 > }

@@ -1,0 +1,26 @@
+data: 
+  data: ENZYMES
+  dir: './data'
+  batch_size: 64
+  test_split: 0.2
+  adj_vals: [0, 1]
+  feat_vals: []
+  max_node_num: 125
+  max_feat_num: 10
+  init: deg
+
+ckpt: gdss_enzymes
+
+sampler:
+  predictor: S4
+  corrector: None
+  snr: 0.15
+  scale_eps: 0.7
+  n_steps: 1
+
+sample:
+  use_ema: True
+  noise_removal: True
+  probability_flow: False
+  eps: 1.0e-4
+  seed: 12

@@ -1,0 +1,15 @@
+# @package _global_
+general:
+    name : 'regressor'
+    gpus : 1
+    wandb: 'online'
+    remove_h: True
+    target: 'both'                    # 'mu', 'homo', 'both', 'no-target'
+train:
+    n_epochs: 1200
+    batch_size: 512
+    save_model: True
+model:
+    n_layers: 5
+    lambda_train: [2, 0]
+    extra_features: null

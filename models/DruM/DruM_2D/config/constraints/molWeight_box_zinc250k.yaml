@@ -1,0 +1,31 @@
+add_diff_step: 0
+burnin: 0
+constraint: Mol-Weight-Box
+max_samples: 10000
+method:
+  gamma: 1.0
+  op: proj
+  solve_order: cpj
+  jacobian: false
+  density_lambda: 0.0
+  last_score: false
+params:
+- - 12.0106
+  - 14.006855
+  - 15.9994
+  - 18.998403163
+  - 30.973761998
+  - 32.067499999999995
+  - 35.451499999999996
+  - 79.904
+  - 126.90447
+- 134.11
+- 483.84
+rounding: none
+schedule:
+  gamma: poly
+  params:
+  - 0
+  - 5
+implicit: false
+eq: false

@@ -1,0 +1,665 @@
+| 05-08 13:16:20 EXPERIMENT BEGIN: 
+| 05-08 13:16:20 logging into exp/qm9/edp-gnn_QM9__May-08-13-16-20_3876149/info.log
+| 05-08 13:16:42 model: EdgeDensePredictionGraphScoreNetwork(
+  (gnn_list): ModuleList(
+    (0): EdgeDensePredictionGNNLayer(
+      (multi_channel_gnn_module): GIN(
+        (linear_prediction): ModuleList(
+          (0): Sequential(
+            (0): Linear(in_features=6, out_features=32, bias=True)
+            (1): LeakyReLU(negative_slope=0.01)
+            (2): Linear(in_features=32, out_features=16, bias=True)
+          )
+          (1): Sequential(
+            (0): Linear(in_features=16, out_features=32, bias=True)
+            (1): LeakyReLU(negative_slope=0.01)
+            (2): Linear(in_features=32, out_features=16, bias=True)
+          )
+          (2): Sequential(
+            (0): Linear(in_features=16, out_features=32, bias=True)
+            (1): LeakyReLU(negative_slope=0.01)
+            (2): Linear(in_features=32, out_features=16, bias=True)
+          )
+          (3): Sequential(
+            (0): Linear(in_features=16, out_features=32, bias=True)
+            (1): LeakyReLU(negative_slope=0.01)
+            (2): Linear(in_features=32, out_features=16, bias=True)
+          )
+          (4): Sequential(
+            (0): Linear(in_features=16, out_features=32, bias=True)
+            (1): LeakyReLU(negative_slope=0.01)
+            (2): Linear(in_features=32, out_features=16, bias=True)
+          )
+        )
+        (layers): ModuleList(
+          (0): MLP(
+            (linears): ModuleList(
+              (0): Linear(in_features=12, out_features=32, bias=True)
+              (1): Linear(in_features=32, out_features=16, bias=True)
+            )
+          )
+          (1): MLP(
+            (linears): ModuleList(
+              (0): Linear(in_features=32, out_features=32, bias=True)
+              (1): Linear(in_features=32, out_features=16, bias=True)
+            )
+          )
+          (2): MLP(
+            (linears): ModuleList(
+              (0): Linear(in_features=32, out_features=32, bias=True)
+              (1): Linear(in_features=32, out_features=16, bias=True)
+            )
+          )
+          (3): MLP(
+            (linears): ModuleList(
+              (0): Linear(in_features=32, out_features=32, bias=True)
+              (1): Linear(in_features=32, out_features=16, bias=True)
+            )
+          )
+        )
+      )
+      (translate_mlp): MLP(
+        (linears): ModuleList(
+          (0): Linear(in_features=34, out_features=4, bias=True)
+          (1): Linear(in_features=4, out_features=4, bias=True)
+          (2): Linear(in_features=4, out_features=2, bias=True)
+        )
+        (batch_norms): ModuleList(
+          (0): BatchNorm1d(4, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): BatchNorm1d(4, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (cond_layers): ModuleList(
+          (0): ConditionalLayer1d()
+          (1): ConditionalLayer1d()
+        )
+      )
+    )
+    (1): EdgeDensePredictionGNNLayer(
+      (multi_channel_gnn_module): GIN(
+        (linear_prediction): ModuleList(
+          (0): Sequential(
+            (0): Linear(in_features=18, out_features=36, bias=True)
+            (1): LeakyReLU(negative_slope=0.01)
+            (2): Linear(in_features=36, out_features=16, bias=True)
+          )
+          (1): Sequential(
+            (0): Linear(in_features=16, out_features=36, bias=True)
+            (1): LeakyReLU(negative_slope=0.01)
+            (2): Linear(in_features=36, out_features=16, bias=True)
+          )
+          (2): Sequential(
+            (0): Linear(in_features=16, out_features=36, bias=True)
+            (1): LeakyReLU(negative_slope=0.01)
+            (2): Linear(in_features=36, out_features=16, bias=True)
+          )
+          (3): Sequential(
+            (0): Linear(in_features=16, out_features=36, bias=True)
+            (1): LeakyReLU(negative_slope=0.01)
+            (2): Linear(in_features=36, out_features=16, bias=True)
+          )
+          (4): Sequential(
+            (0): Linear(in_features=16, out_features=36, bias=True)
+            (1): LeakyReLU(negative_slope=0.01)
+            (2): Linear(in_features=36, out_features=16, bias=True)
+          )
+        )
+        (layers): ModuleList(
+          (0): MLP(
+            (linears): ModuleList(
+              (0): Linear(in_features=36, out_features=36, bias=True)
+              (1): Linear(in_features=36, out_features=16, bias=True)
+            )
+          )
+          (1): MLP(
+            (linears): ModuleList(
+              (0): Linear(in_features=32, out_features=36, bias=True)
+              (1): Linear(in_features=36, out_features=16, bias=True)
+            )
+          )
+          (2): MLP(
+            (linears): ModuleList(
+              (0): Linear(in_features=32, out_features=36, bias=True)
+              (1): Linear(in_features=36, out_features=16, bias=True)
+            )
+          )
+          (3): MLP(
+            (linears): ModuleList(
+              (0): Linear(in_features=32, out_features=36, bias=True)
+              (1): Linear(in_features=36, out_features=16, bias=True)
+            )
+          )
+        )
+      )
+      (translate_mlp): MLP(
+        (linears): ModuleList(
+          (0): Linear(in_features=34, out_features=8, bias=True)
+          (1): Linear(in_features=8, out_features=8, bias=True)
+          (2): Linear(in_features=8, out_features=4, bias=True)
+        )
+        (batch_norms): ModuleList(
+          (0): BatchNorm1d(8, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): BatchNorm1d(8, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (cond_layers): ModuleList(
+          (0): ConditionalLayer1d()
+          (1): ConditionalLayer1d()
+        )
+      )
+    )
+    (2): EdgeDensePredictionGNNLayer(
+      (multi_channel_gnn_module): GIN(
+        (linear_prediction): ModuleList(
+          (0): Sequential(
+            (0): Linear(in_features=20, out_features=40, bias=True)
+            (1): LeakyReLU(negative_slope=0.01)
+            (2): Linear(in_features=40, out_features=16, bias=True)
+          )
+          (1): Sequential(
+            (0): Linear(in_features=16, out_features=40, bias=True)
+            (1): LeakyReLU(negative_slope=0.01)
+            (2): Linear(in_features=40, out_features=16, bias=True)
+          )
+          (2): Sequential(
+            (0): Linear(in_features=16, out_features=40, bias=True)
+            (1): LeakyReLU(negative_slope=0.01)
+            (2): Linear(in_features=40, out_features=16, bias=True)
+          )
+          (3): Sequential(
+            (0): Linear(in_features=16, out_features=40, bias=True)
+            (1): LeakyReLU(negative_slope=0.01)
+            (2): Linear(in_features=40, out_features=16, bias=True)
+          )
+          (4): Sequential(
+            (0): Linear(in_features=16, out_features=40, bias=True)
+            (1): LeakyReLU(negative_slope=0.01)
+            (2): Linear(in_features=40, out_features=16, bias=True)
+          )
+        )
+        (layers): ModuleList(
+          (0): MLP(
+            (linears): ModuleList(
+              (0): Linear(in_features=80, out_features=40, bias=True)
+              (1): Linear(in_features=40, out_features=16, bias=True)
+            )
+          )
+          (1): MLP(
+            (linears): ModuleList(
+              (0): Linear(in_features=64, out_features=40, bias=True)
+              (1): Linear(in_features=40, out_features=16, bias=True)
+            )
+          )
+          (2): MLP(
+            (linears): ModuleList(
+              (0): Linear(in_features=64, out_features=40, bias=True)
+              (1): Linear(in_features=40, out_features=16, bias=True)
+            )
+          )
+          (3): MLP(
+            (linears): ModuleList(
+              (0): Linear(in_features=64, out_features=40, bias=True)
+              (1): Linear(in_features=40, out_features=16, bias=True)
+            )
+          )
+        )
+      )
+      (translate_mlp): MLP(
+        (linears): ModuleList(
+          (0): Linear(in_features=36, out_features=8, bias=True)
+          (1): Linear(in_features=8, out_features=8, bias=True)
+          (2): Linear(in_features=8, out_features=4, bias=True)
+        )
+        (batch_norms): ModuleList(
+          (0): BatchNorm1d(8, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): BatchNorm1d(8, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (cond_layers): ModuleList(
+          (0): ConditionalLayer1d()
+          (1): ConditionalLayer1d()
+        )
+      )
+    )
+    (3): EdgeDensePredictionGNNLayer(
+      (multi_channel_gnn_module): GIN(
+        (linear_prediction): ModuleList(
+          (0): Sequential(
+            (0): Linear(in_features=20, out_features=40, bias=True)
+            (1): LeakyReLU(negative_slope=0.01)
+            (2): Linear(in_features=40, out_features=16, bias=True)
+          )
+          (1): Sequential(
+            (0): Linear(in_features=16, out_features=40, bias=True)
+            (1): LeakyReLU(negative_slope=0.01)
+            (2): Linear(in_features=40, out_features=16, bias=True)
+          )
+          (2): Sequential(
+            (0): Linear(in_features=16, out_features=40, bias=True)
+            (1): LeakyReLU(negative_slope=0.01)
+            (2): Linear(in_features=40, out_features=16, bias=True)
+          )
+          (3): Sequential(
+            (0): Linear(in_features=16, out_features=40, bias=True)
+            (1): LeakyReLU(negative_slope=0.01)
+            (2): Linear(in_features=40, out_features=16, bias=True)
+          )
+          (4): Sequential(
+            (0): Linear(in_features=16, out_features=40, bias=True)
+            (1): LeakyReLU(negative_slope=0.01)
+            (2): Linear(in_features=40, out_features=16, bias=True)
+          )
+        )
+        (layers): ModuleList(
+          (0): MLP(
+            (linears): ModuleList(
+              (0): Linear(in_features=80, out_features=40, bias=True)
+              (1): Linear(in_features=40, out_features=16, bias=True)
+            )
+          )
+          (1): MLP(
+            (linears): ModuleList(
+              (0): Linear(in_features=64, out_features=40, bias=True)
+              (1): Linear(in_features=40, out_features=16, bias=True)
+            )
+          )
+          (2): MLP(
+            (linears): ModuleList(
+              (0): Linear(in_features=64, out_features=40, bias=True)
+              (1): Linear(in_features=40, out_features=16, bias=True)
+            )
+          )
+          (3): MLP(
+            (linears): ModuleList(
+              (0): Linear(in_features=64, out_features=40, bias=True)
+              (1): Linear(in_features=40, out_features=16, bias=True)
+            )
+          )
+        )
+      )
+      (translate_mlp): MLP(
+        (linears): ModuleList(
+          (0): Linear(in_features=36, out_features=8, bias=True)
+          (1): Linear(in_features=8, out_features=8, bias=True)
+          (2): Linear(in_features=8, out_features=4, bias=True)
+        )
+        (batch_norms): ModuleList(
+          (0): BatchNorm1d(8, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): BatchNorm1d(8, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (cond_layers): ModuleList(
+          (0): ConditionalLayer1d()
+          (1): ConditionalLayer1d()
+        )
+      )
+    )
+    (4): EdgeDensePredictionGNNLayer(
+      (multi_channel_gnn_module): GIN(
+        (linear_prediction): ModuleList(
+          (0): Sequential(
+            (0): Linear(in_features=20, out_features=40, bias=True)
+            (1): LeakyReLU(negative_slope=0.01)
+            (2): Linear(in_features=40, out_features=16, bias=True)
+          )
+          (1): Sequential(
+            (0): Linear(in_features=16, out_features=40, bias=True)
+            (1): LeakyReLU(negative_slope=0.01)
+            (2): Linear(in_features=40, out_features=16, bias=True)
+          )
+          (2): Sequential(
+            (0): Linear(in_features=16, out_features=40, bias=True)
+            (1): LeakyReLU(negative_slope=0.01)
+            (2): Linear(in_features=40, out_features=16, bias=True)
+          )
+          (3): Sequential(
+            (0): Linear(in_features=16, out_features=40, bias=True)
+            (1): LeakyReLU(negative_slope=0.01)
+            (2): Linear(in_features=40, out_features=16, bias=True)
+          )
+          (4): Sequential(
+            (0): Linear(in_features=16, out_features=40, bias=True)
+            (1): LeakyReLU(negative_slope=0.01)
+            (2): Linear(in_features=40, out_features=16, bias=True)
+          )
+        )
+        (layers): ModuleList(
+          (0): MLP(
+            (linears): ModuleList(
+              (0): Linear(in_features=80, out_features=40, bias=True)
+              (1): Linear(in_features=40, out_features=16, bias=True)
+            )
+          )
+          (1): MLP(
+            (linears): ModuleList(
+              (0): Linear(in_features=64, out_features=40, bias=True)
+              (1): Linear(in_features=40, out_features=16, bias=True)
+            )
+          )
+          (2): MLP(
+            (linears): ModuleList(
+              (0): Linear(in_features=64, out_features=40, bias=True)
+              (1): Linear(in_features=40, out_features=16, bias=True)
+            )
+          )
+          (3): MLP(
+            (linears): ModuleList(
+              (0): Linear(in_features=64, out_features=40, bias=True)
+              (1): Linear(in_features=40, out_features=16, bias=True)
+            )
+          )
+        )
+      )
+      (translate_mlp): MLP(
+        (linears): ModuleList(
+          (0): Linear(in_features=36, out_features=8, bias=True)
+          (1): Linear(in_features=8, out_features=8, bias=True)
+          (2): Linear(in_features=8, out_features=2, bias=True)
+        )
+        (batch_norms): ModuleList(
+          (0): BatchNorm1d(8, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): BatchNorm1d(8, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (cond_layers): ModuleList(
+          (0): ConditionalLayer1d()
+          (1): ConditionalLayer1d()
+        )
+      )
+    )
+  )
+  (final_read_score): MLP(
+    (linears): ModuleList(
+      (0): Linear(in_features=18, out_features=36, bias=True)
+      (1): Linear(in_features=36, out_features=36, bias=True)
+      (2): Linear(in_features=36, out_features=1, bias=True)
+    )
+    (cond_layers): ModuleList(
+      (0): ConditionalLayer1d()
+      (1): ConditionalLayer1d()
+    )
+  )
+)
+| 05-08 13:16:42 Parameters: 
+gnn_list.0.multi_channel_gnn_module.eps ........................................................................ torch.Size([4])
+gnn_list.0.multi_channel_gnn_module.linear_prediction.0.0.weight ........................................... torch.Size([32, 6])
+gnn_list.0.multi_channel_gnn_module.linear_prediction.0.0.bias ................................................ torch.Size([32])
+gnn_list.0.multi_channel_gnn_module.linear_prediction.0.2.weight .......................................... torch.Size([16, 32])
+gnn_list.0.multi_channel_gnn_module.linear_prediction.0.2.bias ................................................ torch.Size([16])
+gnn_list.0.multi_channel_gnn_module.linear_prediction.1.0.weight .......................................... torch.Size([32, 16])
+gnn_list.0.multi_channel_gnn_module.linear_prediction.1.0.bias ................................................ torch.Size([32])
+gnn_list.0.multi_channel_gnn_module.linear_prediction.1.2.weight .......................................... torch.Size([16, 32])
+gnn_list.0.multi_channel_gnn_module.linear_prediction.1.2.bias ................................................ torch.Size([16])
+gnn_list.0.multi_channel_gnn_module.linear_prediction.2.0.weight .......................................... torch.Size([32, 16])
+gnn_list.0.multi_channel_gnn_module.linear_prediction.2.0.bias ................................................ torch.Size([32])
+gnn_list.0.multi_channel_gnn_module.linear_prediction.2.2.weight .......................................... torch.Size([16, 32])
+gnn_list.0.multi_channel_gnn_module.linear_prediction.2.2.bias ................................................ torch.Size([16])
+gnn_list.0.multi_channel_gnn_module.linear_prediction.3.0.weight .......................................... torch.Size([32, 16])
+gnn_list.0.multi_channel_gnn_module.linear_prediction.3.0.bias ................................................ torch.Size([32])
+gnn_list.0.multi_channel_gnn_module.linear_prediction.3.2.weight .......................................... torch.Size([16, 32])
+gnn_list.0.multi_channel_gnn_module.linear_prediction.3.2.bias ................................................ torch.Size([16])
+gnn_list.0.multi_channel_gnn_module.linear_prediction.4.0.weight .......................................... torch.Size([32, 16])
+gnn_list.0.multi_channel_gnn_module.linear_prediction.4.0.bias ................................................ torch.Size([32])
+gnn_list.0.multi_channel_gnn_module.linear_prediction.4.2.weight .......................................... torch.Size([16, 32])
+gnn_list.0.multi_channel_gnn_module.linear_prediction.4.2.bias ................................................ torch.Size([16])
+gnn_list.0.multi_channel_gnn_module.layers.0.linears.0.weight ............................................. torch.Size([32, 12])
+gnn_list.0.multi_channel_gnn_module.layers.0.linears.0.bias ................................................... torch.Size([32])
+gnn_list.0.multi_channel_gnn_module.layers.0.linears.1.weight ............................................. torch.Size([16, 32])
+gnn_list.0.multi_channel_gnn_module.layers.0.linears.1.bias ................................................... torch.Size([16])
+gnn_list.0.multi_channel_gnn_module.layers.1.linears.0.weight ............................................. torch.Size([32, 32])
+gnn_list.0.multi_channel_gnn_module.layers.1.linears.0.bias ................................................... torch.Size([32])
+gnn_list.0.multi_channel_gnn_module.layers.1.linears.1.weight ............................................. torch.Size([16, 32])
+gnn_list.0.multi_channel_gnn_module.layers.1.linears.1.bias ................................................... torch.Size([16])
+gnn_list.0.multi_channel_gnn_module.layers.2.linears.0.weight ............................................. torch.Size([32, 32])
+gnn_list.0.multi_channel_gnn_module.layers.2.linears.0.bias ................................................... torch.Size([32])
+gnn_list.0.multi_channel_gnn_module.layers.2.linears.1.weight ............................................. torch.Size([16, 32])
+gnn_list.0.multi_channel_gnn_module.layers.2.linears.1.bias ................................................... torch.Size([16])
+gnn_list.0.multi_channel_gnn_module.layers.3.linears.0.weight ............................................. torch.Size([32, 32])
+gnn_list.0.multi_channel_gnn_module.layers.3.linears.0.bias ................................................... torch.Size([32])
+gnn_list.0.multi_channel_gnn_module.layers.3.linears.1.weight ............................................. torch.Size([16, 32])
+gnn_list.0.multi_channel_gnn_module.layers.3.linears.1.bias ................................................... torch.Size([16])
+gnn_list.0.translate_mlp.linears.0.weight .................................................................. torch.Size([4, 34])
+gnn_list.0.translate_mlp.linears.0.bias ........................................................................ torch.Size([4])
+gnn_list.0.translate_mlp.linears.1.weight ................................................................... torch.Size([4, 4])
+gnn_list.0.translate_mlp.linears.1.bias ........................................................................ torch.Size([4])
+gnn_list.0.translate_mlp.linears.2.weight ................................................................... torch.Size([2, 4])
+gnn_list.0.translate_mlp.linears.2.bias ........................................................................ torch.Size([2])
+gnn_list.0.translate_mlp.batch_norms.0.weight .................................................................. torch.Size([4])
+gnn_list.0.translate_mlp.batch_norms.0.bias .................................................................... torch.Size([4])
+gnn_list.0.translate_mlp.batch_norms.1.weight .................................................................. torch.Size([4])
+gnn_list.0.translate_mlp.batch_norms.1.bias .................................................................... torch.Size([4])
+gnn_list.0.translate_mlp.cond_layers.0.gain .............................................................. torch.Size([6, 1, 4])
+gnn_list.0.translate_mlp.cond_layers.0.bias .............................................................. torch.Size([6, 1, 4])
+gnn_list.0.translate_mlp.cond_layers.1.gain .............................................................. torch.Size([6, 1, 4])
+gnn_list.0.translate_mlp.cond_layers.1.bias .............................................................. torch.Size([6, 1, 4])
+gnn_list.1.multi_channel_gnn_module.eps ........................................................................ torch.Size([4])
+gnn_list.1.multi_channel_gnn_module.linear_prediction.0.0.weight .......................................... torch.Size([36, 18])
+gnn_list.1.multi_channel_gnn_module.linear_prediction.0.0.bias ................................................ torch.Size([36])
+gnn_list.1.multi_channel_gnn_module.linear_prediction.0.2.weight .......................................... torch.Size([16, 36])
+gnn_list.1.multi_channel_gnn_module.linear_prediction.0.2.bias ................................................ torch.Size([16])
+gnn_list.1.multi_channel_gnn_module.linear_prediction.1.0.weight .......................................... torch.Size([36, 16])
+gnn_list.1.multi_channel_gnn_module.linear_prediction.1.0.bias ................................................ torch.Size([36])
+gnn_list.1.multi_channel_gnn_module.linear_prediction.1.2.weight .......................................... torch.Size([16, 36])
+gnn_list.1.multi_channel_gnn_module.linear_prediction.1.2.bias ................................................ torch.Size([16])
+gnn_list.1.multi_channel_gnn_module.linear_prediction.2.0.weight .......................................... torch.Size([36, 16])
+gnn_list.1.multi_channel_gnn_module.linear_prediction.2.0.bias ................................................ torch.Size([36])
+gnn_list.1.multi_channel_gnn_module.linear_prediction.2.2.weight .......................................... torch.Size([16, 36])
+gnn_list.1.multi_channel_gnn_module.linear_prediction.2.2.bias ................................................ torch.Size([16])
+gnn_list.1.multi_channel_gnn_module.linear_prediction.3.0.weight .......................................... torch.Size([36, 16])
+gnn_list.1.multi_channel_gnn_module.linear_prediction.3.0.bias ................................................ torch.Size([36])
+gnn_list.1.multi_channel_gnn_module.linear_prediction.3.2.weight .......................................... torch.Size([16, 36])
+gnn_list.1.multi_channel_gnn_module.linear_prediction.3.2.bias ................................................ torch.Size([16])
+gnn_list.1.multi_channel_gnn_module.linear_prediction.4.0.weight .......................................... torch.Size([36, 16])
+gnn_list.1.multi_channel_gnn_module.linear_prediction.4.0.bias ................................................ torch.Size([36])
+gnn_list.1.multi_channel_gnn_module.linear_prediction.4.2.weight .......................................... torch.Size([16, 36])
+gnn_list.1.multi_channel_gnn_module.linear_prediction.4.2.bias ................................................ torch.Size([16])
+gnn_list.1.multi_channel_gnn_module.layers.0.linears.0.weight ............................................. torch.Size([36, 36])
+gnn_list.1.multi_channel_gnn_module.layers.0.linears.0.bias ................................................... torch.Size([36])
+gnn_list.1.multi_channel_gnn_module.layers.0.linears.1.weight ............................................. torch.Size([16, 36])
+gnn_list.1.multi_channel_gnn_module.layers.0.linears.1.bias ................................................... torch.Size([16])
+gnn_list.1.multi_channel_gnn_module.layers.1.linears.0.weight ............................................. torch.Size([36, 32])
+gnn_list.1.multi_channel_gnn_module.layers.1.linears.0.bias ................................................... torch.Size([36])
+gnn_list.1.multi_channel_gnn_module.layers.1.linears.1.weight ............................................. torch.Size([16, 36])
+gnn_list.1.multi_channel_gnn_module.layers.1.linears.1.bias ................................................... torch.Size([16])
+gnn_list.1.multi_channel_gnn_module.layers.2.linears.0.weight ............................................. torch.Size([36, 32])
+gnn_list.1.multi_channel_gnn_module.layers.2.linears.0.bias ................................................... torch.Size([36])
+gnn_list.1.multi_channel_gnn_module.layers.2.linears.1.weight ............................................. torch.Size([16, 36])
+gnn_list.1.multi_channel_gnn_module.layers.2.linears.1.bias ................................................... torch.Size([16])
+gnn_list.1.multi_channel_gnn_module.layers.3.linears.0.weight ............................................. torch.Size([36, 32])
+gnn_list.1.multi_channel_gnn_module.layers.3.linears.0.bias ................................................... torch.Size([36])
+gnn_list.1.multi_channel_gnn_module.layers.3.linears.1.weight ............................................. torch.Size([16, 36])
+gnn_list.1.multi_channel_gnn_module.layers.3.linears.1.bias ................................................... torch.Size([16])
+gnn_list.1.translate_mlp.linears.0.weight .................................................................. torch.Size([8, 34])
+gnn_list.1.translate_mlp.linears.0.bias ........................................................................ torch.Size([8])
+gnn_list.1.translate_mlp.linears.1.weight ................................................................... torch.Size([8, 8])
+gnn_list.1.translate_mlp.linears.1.bias ........................................................................ torch.Size([8])
+gnn_list.1.translate_mlp.linears.2.weight ................................................................... torch.Size([4, 8])
+gnn_list.1.translate_mlp.linears.2.bias ........................................................................ torch.Size([4])
+gnn_list.1.translate_mlp.batch_norms.0.weight .................................................................. torch.Size([8])
+gnn_list.1.translate_mlp.batch_norms.0.bias .................................................................... torch.Size([8])
+gnn_list.1.translate_mlp.batch_norms.1.weight .................................................................. torch.Size([8])
+gnn_list.1.translate_mlp.batch_norms.1.bias .................................................................... torch.Size([8])
+gnn_list.1.translate_mlp.cond_layers.0.gain .............................................................. torch.Size([6, 1, 8])
+gnn_list.1.translate_mlp.cond_layers.0.bias .............................................................. torch.Size([6, 1, 8])
+gnn_list.1.translate_mlp.cond_layers.1.gain .............................................................. torch.Size([6, 1, 8])
+gnn_list.1.translate_mlp.cond_layers.1.bias .............................................................. torch.Size([6, 1, 8])
+gnn_list.2.multi_channel_gnn_module.eps ........................................................................ torch.Size([4])
+gnn_list.2.multi_channel_gnn_module.linear_prediction.0.0.weight .......................................... torch.Size([40, 20])
+gnn_list.2.multi_channel_gnn_module.linear_prediction.0.0.bias ................................................ torch.Size([40])
+gnn_list.2.multi_channel_gnn_module.linear_prediction.0.2.weight .......................................... torch.Size([16, 40])
+gnn_list.2.multi_channel_gnn_module.linear_prediction.0.2.bias ................................................ torch.Size([16])
+gnn_list.2.multi_channel_gnn_module.linear_prediction.1.0.weight .......................................... torch.Size([40, 16])
+gnn_list.2.multi_channel_gnn_module.linear_prediction.1.0.bias ................................................ torch.Size([40])
+gnn_list.2.multi_channel_gnn_module.linear_prediction.1.2.weight .......................................... torch.Size([16, 40])
+gnn_list.2.multi_channel_gnn_module.linear_prediction.1.2.bias ................................................ torch.Size([16])
+gnn_list.2.multi_channel_gnn_module.linear_prediction.2.0.weight .......................................... torch.Size([40, 16])
+gnn_list.2.multi_channel_gnn_module.linear_prediction.2.0.bias ................................................ torch.Size([40])
+gnn_list.2.multi_channel_gnn_module.linear_prediction.2.2.weight .......................................... torch.Size([16, 40])
+gnn_list.2.multi_channel_gnn_module.linear_prediction.2.2.bias ................................................ torch.Size([16])
+gnn_list.2.multi_channel_gnn_module.linear_prediction.3.0.weight .......................................... torch.Size([40, 16])
+gnn_list.2.multi_channel_gnn_module.linear_prediction.3.0.bias ................................................ torch.Size([40])
+gnn_list.2.multi_channel_gnn_module.linear_prediction.3.2.weight .......................................... torch.Size([16, 40])
+gnn_list.2.multi_channel_gnn_module.linear_prediction.3.2.bias ................................................ torch.Size([16])
+gnn_list.2.multi_channel_gnn_module.linear_prediction.4.0.weight .......................................... torch.Size([40, 16])
+gnn_list.2.multi_channel_gnn_module.linear_prediction.4.0.bias ................................................ torch.Size([40])
+gnn_list.2.multi_channel_gnn_module.linear_prediction.4.2.weight .......................................... torch.Size([16, 40])
+gnn_list.2.multi_channel_gnn_module.linear_prediction.4.2.bias ................................................ torch.Size([16])
+gnn_list.2.multi_channel_gnn_module.layers.0.linears.0.weight ............................................. torch.Size([40, 80])
+gnn_list.2.multi_channel_gnn_module.layers.0.linears.0.bias ................................................... torch.Size([40])
+gnn_list.2.multi_channel_gnn_module.layers.0.linears.1.weight ............................................. torch.Size([16, 40])
+gnn_list.2.multi_channel_gnn_module.layers.0.linears.1.bias ................................................... torch.Size([16])
+gnn_list.2.multi_channel_gnn_module.layers.1.linears.0.weight ............................................. torch.Size([40, 64])
+gnn_list.2.multi_channel_gnn_module.layers.1.linears.0.bias ................................................... torch.Size([40])
+gnn_list.2.multi_channel_gnn_module.layers.1.linears.1.weight ............................................. torch.Size([16, 40])
+gnn_list.2.multi_channel_gnn_module.layers.1.linears.1.bias ................................................... torch.Size([16])
+gnn_list.2.multi_channel_gnn_module.layers.2.linears.0.weight ............................................. torch.Size([40, 64])
+gnn_list.2.multi_channel_gnn_module.layers.2.linears.0.bias ................................................... torch.Size([40])
+gnn_list.2.multi_channel_gnn_module.layers.2.linears.1.weight ............................................. torch.Size([16, 40])
+gnn_list.2.multi_channel_gnn_module.layers.2.linears.1.bias ................................................... torch.Size([16])
+gnn_list.2.multi_channel_gnn_module.layers.3.linears.0.weight ............................................. torch.Size([40, 64])
+gnn_list.2.multi_channel_gnn_module.layers.3.linears.0.bias ................................................... torch.Size([40])
+gnn_list.2.multi_channel_gnn_module.layers.3.linears.1.weight ............................................. torch.Size([16, 40])
+gnn_list.2.multi_channel_gnn_module.layers.3.linears.1.bias ................................................... torch.Size([16])
+gnn_list.2.translate_mlp.linears.0.weight .................................................................. torch.Size([8, 36])
+gnn_list.2.translate_mlp.linears.0.bias ........................................................................ torch.Size([8])
+gnn_list.2.translate_mlp.linears.1.weight ................................................................... torch.Size([8, 8])
+gnn_list.2.translate_mlp.linears.1.bias ........................................................................ torch.Size([8])
+gnn_list.2.translate_mlp.linears.2.weight ................................................................... torch.Size([4, 8])
+gnn_list.2.translate_mlp.linears.2.bias ........................................................................ torch.Size([4])
+gnn_list.2.translate_mlp.batch_norms.0.weight .................................................................. torch.Size([8])
+gnn_list.2.translate_mlp.batch_norms.0.bias .................................................................... torch.Size([8])
+gnn_list.2.translate_mlp.batch_norms.1.weight .................................................................. torch.Size([8])
+gnn_list.2.translate_mlp.batch_norms.1.bias .................................................................... torch.Size([8])
+gnn_list.2.translate_mlp.cond_layers.0.gain .............................................................. torch.Size([6, 1, 8])
+gnn_list.2.translate_mlp.cond_layers.0.bias .............................................................. torch.Size([6, 1, 8])
+gnn_list.2.translate_mlp.cond_layers.1.gain .............................................................. torch.Size([6, 1, 8])
+gnn_list.2.translate_mlp.cond_layers.1.bias .............................................................. torch.Size([6, 1, 8])
+gnn_list.3.multi_channel_gnn_module.eps ........................................................................ torch.Size([4])
+gnn_list.3.multi_channel_gnn_module.linear_prediction.0.0.weight .......................................... torch.Size([40, 20])
+gnn_list.3.multi_channel_gnn_module.linear_prediction.0.0.bias ................................................ torch.Size([40])
+gnn_list.3.multi_channel_gnn_module.linear_prediction.0.2.weight .......................................... torch.Size([16, 40])
+gnn_list.3.multi_channel_gnn_module.linear_prediction.0.2.bias ................................................ torch.Size([16])
+gnn_list.3.multi_channel_gnn_module.linear_prediction.1.0.weight .......................................... torch.Size([40, 16])
+gnn_list.3.multi_channel_gnn_module.linear_prediction.1.0.bias ................................................ torch.Size([40])
+gnn_list.3.multi_channel_gnn_module.linear_prediction.1.2.weight .......................................... torch.Size([16, 40])
+gnn_list.3.multi_channel_gnn_module.linear_prediction.1.2.bias ................................................ torch.Size([16])
+gnn_list.3.multi_channel_gnn_module.linear_prediction.2.0.weight .......................................... torch.Size([40, 16])
+gnn_list.3.multi_channel_gnn_module.linear_prediction.2.0.bias ................................................ torch.Size([40])
+gnn_list.3.multi_channel_gnn_module.linear_prediction.2.2.weight .......................................... torch.Size([16, 40])
+gnn_list.3.multi_channel_gnn_module.linear_prediction.2.2.bias ................................................ torch.Size([16])
+gnn_list.3.multi_channel_gnn_module.linear_prediction.3.0.weight .......................................... torch.Size([40, 16])
+gnn_list.3.multi_channel_gnn_module.linear_prediction.3.0.bias ................................................ torch.Size([40])
+gnn_list.3.multi_channel_gnn_module.linear_prediction.3.2.weight .......................................... torch.Size([16, 40])
+gnn_list.3.multi_channel_gnn_module.linear_prediction.3.2.bias ................................................ torch.Size([16])
+gnn_list.3.multi_channel_gnn_module.linear_prediction.4.0.weight .......................................... torch.Size([40, 16])
+gnn_list.3.multi_channel_gnn_module.linear_prediction.4.0.bias ................................................ torch.Size([40])
+gnn_list.3.multi_channel_gnn_module.linear_prediction.4.2.weight .......................................... torch.Size([16, 40])
+gnn_list.3.multi_channel_gnn_module.linear_prediction.4.2.bias ................................................ torch.Size([16])
+gnn_list.3.multi_channel_gnn_module.layers.0.linears.0.weight ............................................. torch.Size([40, 80])
+gnn_list.3.multi_channel_gnn_module.layers.0.linears.0.bias ................................................... torch.Size([40])
+gnn_list.3.multi_channel_gnn_module.layers.0.linears.1.weight ............................................. torch.Size([16, 40])
+gnn_list.3.multi_channel_gnn_module.layers.0.linears.1.bias ................................................... torch.Size([16])
+gnn_list.3.multi_channel_gnn_module.layers.1.linears.0.weight ............................................. torch.Size([40, 64])
+gnn_list.3.multi_channel_gnn_module.layers.1.linears.0.bias ................................................... torch.Size([40])
+gnn_list.3.multi_channel_gnn_module.layers.1.linears.1.weight ............................................. torch.Size([16, 40])
+gnn_list.3.multi_channel_gnn_module.layers.1.linears.1.bias ................................................... torch.Size([16])
+gnn_list.3.multi_channel_gnn_module.layers.2.linears.0.weight ............................................. torch.Size([40, 64])
+gnn_list.3.multi_channel_gnn_module.layers.2.linears.0.bias ................................................... torch.Size([40])
+gnn_list.3.multi_channel_gnn_module.layers.2.linears.1.weight ............................................. torch.Size([16, 40])
+gnn_list.3.multi_channel_gnn_module.layers.2.linears.1.bias ................................................... torch.Size([16])
+gnn_list.3.multi_channel_gnn_module.layers.3.linears.0.weight ............................................. torch.Size([40, 64])
+gnn_list.3.multi_channel_gnn_module.layers.3.linears.0.bias ................................................... torch.Size([40])
+gnn_list.3.multi_channel_gnn_module.layers.3.linears.1.weight ............................................. torch.Size([16, 40])
+gnn_list.3.multi_channel_gnn_module.layers.3.linears.1.bias ................................................... torch.Size([16])
+gnn_list.3.translate_mlp.linears.0.weight .................................................................. torch.Size([8, 36])
+gnn_list.3.translate_mlp.linears.0.bias ........................................................................ torch.Size([8])
+gnn_list.3.translate_mlp.linears.1.weight ................................................................... torch.Size([8, 8])
+gnn_list.3.translate_mlp.linears.1.bias ........................................................................ torch.Size([8])
+gnn_list.3.translate_mlp.linears.2.weight ................................................................... torch.Size([4, 8])
+gnn_list.3.translate_mlp.linears.2.bias ........................................................................ torch.Size([4])
+gnn_list.3.translate_mlp.batch_norms.0.weight .................................................................. torch.Size([8])
+gnn_list.3.translate_mlp.batch_norms.0.bias .................................................................... torch.Size([8])
+gnn_list.3.translate_mlp.batch_norms.1.weight .................................................................. torch.Size([8])
+gnn_list.3.translate_mlp.batch_norms.1.bias .................................................................... torch.Size([8])
+gnn_list.3.translate_mlp.cond_layers.0.gain .............................................................. torch.Size([6, 1, 8])
+gnn_list.3.translate_mlp.cond_layers.0.bias .............................................................. torch.Size([6, 1, 8])
+gnn_list.3.translate_mlp.cond_layers.1.gain .............................................................. torch.Size([6, 1, 8])
+gnn_list.3.translate_mlp.cond_layers.1.bias .............................................................. torch.Size([6, 1, 8])
+gnn_list.4.multi_channel_gnn_module.eps ........................................................................ torch.Size([4])
+gnn_list.4.multi_channel_gnn_module.linear_prediction.0.0.weight .......................................... torch.Size([40, 20])
+gnn_list.4.multi_channel_gnn_module.linear_prediction.0.0.bias ................................................ torch.Size([40])
+gnn_list.4.multi_channel_gnn_module.linear_prediction.0.2.weight .......................................... torch.Size([16, 40])
+gnn_list.4.multi_channel_gnn_module.linear_prediction.0.2.bias ................................................ torch.Size([16])
+gnn_list.4.multi_channel_gnn_module.linear_prediction.1.0.weight .......................................... torch.Size([40, 16])
+gnn_list.4.multi_channel_gnn_module.linear_prediction.1.0.bias ................................................ torch.Size([40])
+gnn_list.4.multi_channel_gnn_module.linear_prediction.1.2.weight .......................................... torch.Size([16, 40])
+gnn_list.4.multi_channel_gnn_module.linear_prediction.1.2.bias ................................................ torch.Size([16])
+gnn_list.4.multi_channel_gnn_module.linear_prediction.2.0.weight .......................................... torch.Size([40, 16])
+gnn_list.4.multi_channel_gnn_module.linear_prediction.2.0.bias ................................................ torch.Size([40])
+gnn_list.4.multi_channel_gnn_module.linear_prediction.2.2.weight .......................................... torch.Size([16, 40])
+gnn_list.4.multi_channel_gnn_module.linear_prediction.2.2.bias ................................................ torch.Size([16])
+gnn_list.4.multi_channel_gnn_module.linear_prediction.3.0.weight .......................................... torch.Size([40, 16])
+gnn_list.4.multi_channel_gnn_module.linear_prediction.3.0.bias ................................................ torch.Size([40])
+gnn_list.4.multi_channel_gnn_module.linear_prediction.3.2.weight .......................................... torch.Size([16, 40])
+gnn_list.4.multi_channel_gnn_module.linear_prediction.3.2.bias ................................................ torch.Size([16])
+gnn_list.4.multi_channel_gnn_module.linear_prediction.4.0.weight .......................................... torch.Size([40, 16])
+gnn_list.4.multi_channel_gnn_module.linear_prediction.4.0.bias ................................................ torch.Size([40])
+gnn_list.4.multi_channel_gnn_module.linear_prediction.4.2.weight .......................................... torch.Size([16, 40])
+gnn_list.4.multi_channel_gnn_module.linear_prediction.4.2.bias ................................................ torch.Size([16])
+gnn_list.4.multi_channel_gnn_module.layers.0.linears.0.weight ............................................. torch.Size([40, 80])
+gnn_list.4.multi_channel_gnn_module.layers.0.linears.0.bias ................................................... torch.Size([40])
+gnn_list.4.multi_channel_gnn_module.layers.0.linears.1.weight ............................................. torch.Size([16, 40])
+gnn_list.4.multi_channel_gnn_module.layers.0.linears.1.bias ................................................... torch.Size([16])
+gnn_list.4.multi_channel_gnn_module.layers.1.linears.0.weight ............................................. torch.Size([40, 64])
+gnn_list.4.multi_channel_gnn_module.layers.1.linears.0.bias ................................................... torch.Size([40])
+gnn_list.4.multi_channel_gnn_module.layers.1.linears.1.weight ............................................. torch.Size([16, 40])
+gnn_list.4.multi_channel_gnn_module.layers.1.linears.1.bias ................................................... torch.Size([16])
+gnn_list.4.multi_channel_gnn_module.layers.2.linears.0.weight ............................................. torch.Size([40, 64])
+gnn_list.4.multi_channel_gnn_module.layers.2.linears.0.bias ................................................... torch.Size([40])
+gnn_list.4.multi_channel_gnn_module.layers.2.linears.1.weight ............................................. torch.Size([16, 40])
+gnn_list.4.multi_channel_gnn_module.layers.2.linears.1.bias ................................................... torch.Size([16])
+gnn_list.4.multi_channel_gnn_module.layers.3.linears.0.weight ............................................. torch.Size([40, 64])
+gnn_list.4.multi_channel_gnn_module.layers.3.linears.0.bias ................................................... torch.Size([40])
+gnn_list.4.multi_channel_gnn_module.layers.3.linears.1.weight ............................................. torch.Size([16, 40])
+gnn_list.4.multi_channel_gnn_module.layers.3.linears.1.bias ................................................... torch.Size([16])
+gnn_list.4.translate_mlp.linears.0.weight .................................................................. torch.Size([8, 36])
+gnn_list.4.translate_mlp.linears.0.bias ........................................................................ torch.Size([8])
+gnn_list.4.translate_mlp.linears.1.weight ................................................................... torch.Size([8, 8])
+gnn_list.4.translate_mlp.linears.1.bias ........................................................................ torch.Size([8])
+gnn_list.4.translate_mlp.linears.2.weight ................................................................... torch.Size([2, 8])
+gnn_list.4.translate_mlp.linears.2.bias ........................................................................ torch.Size([2])
+gnn_list.4.translate_mlp.batch_norms.0.weight .................................................................. torch.Size([8])
+gnn_list.4.translate_mlp.batch_norms.0.bias .................................................................... torch.Size([8])
+gnn_list.4.translate_mlp.batch_norms.1.weight .................................................................. torch.Size([8])
+gnn_list.4.translate_mlp.batch_norms.1.bias .................................................................... torch.Size([8])
+gnn_list.4.translate_mlp.cond_layers.0.gain .............................................................. torch.Size([6, 1, 8])
+gnn_list.4.translate_mlp.cond_layers.0.bias .............................................................. torch.Size([6, 1, 8])
+gnn_list.4.translate_mlp.cond_layers.1.gain .............................................................. torch.Size([6, 1, 8])
+gnn_list.4.translate_mlp.cond_layers.1.bias .............................................................. torch.Size([6, 1, 8])
+final_read_score.linears.0.weight ......................................................................... torch.Size([36, 18])
+final_read_score.linears.0.bias ............................................................................... torch.Size([36])
+final_read_score.linears.1.weight ......................................................................... torch.Size([36, 36])
+final_read_score.linears.1.bias ............................................................................... torch.Size([36])
+final_read_score.linears.2.weight .......................................................................... torch.Size([1, 36])
+final_read_score.linears.2.bias ................................................................................ torch.Size([1])
+final_read_score.cond_layers.0.gain ..................................................................... torch.Size([6, 1, 36])
+final_read_score.cond_layers.0.bias ..................................................................... torch.Size([6, 1, 36])
+final_read_score.cond_layers.1.gain ..................................................................... torch.Size([6, 1, 36])
+final_read_score.cond_layers.1.bias ..................................................................... torch.Size([6, 1, 36])
+| 05-08 13:16:42 Parameters Count: 91301, Trainable: 91301
+| 05-08 13:16:42 [0.1, 0.2, 0.4, 0.6, 0.8, 1.6], 0.0
+| 05-08 13:18:00 epoch: 000| time: 77.3s| train loss: +7.109e+01 | test loss: +4.647e+01 | 
+| 05-08 13:18:00 epoch: 000| train loss i: [25.45	18.54	10.89	 7.35	 5.71	 3.14] test loss i: [20.28	13.38	 6.63	 3.41	 2.13	 0.64] | 
+| 05-08 13:19:17 epoch: 001| time: 77.1s| train loss: +4.050e+01 | test loss: +3.994e+01 | 
+| 05-08 13:19:17 epoch: 001| train loss i: [16.66	12.33	 5.85	 3.13	 1.94	 0.58] test loss i: [16.43	12.19	 5.77	 3.09	 1.89	 0.56] | 
+| 05-08 13:20:34 epoch: 002| time: 77.0s| train loss: +3.999e+01 | test loss: +4.038e+01 | 
+| 05-08 13:20:34 epoch: 002| train loss i: [16.11	12.18	 5.86	 3.19	 1.98	 0.66] test loss i: [16.41	12.37	 5.94	 3.18	 1.88	 0.59] | 
+| 05-08 13:21:51 epoch: 003| time: 76.9s| train loss: +3.856e+01 | test loss: +4.127e+01 | 
+| 05-08 13:21:51 epoch: 003| train loss i: [15.2 	12.1 	 5.78	 3.08	 1.88	 0.52] test loss i: [16.61	12.73	 6.09	 3.23	 1.93	 0.69] | 
+| 05-08 13:23:08 epoch: 004| time: 77.0s| train loss: +3.743e+01 | test loss: +3.920e+01 | 
+| 05-08 13:23:08 epoch: 004| train loss i: [14.15	12.04	 5.78	 3.07	 1.86	 0.54] test loss i: [15.76	12.03	 5.86	 3.13	 1.89	 0.51] | 
+| 05-08 13:24:24 epoch: 005| time: 76.1s| train loss: +3.664e+01 | test loss: +3.624e+01 | 
+| 05-08 13:24:24 epoch: 005| train loss i: [13.36	12.03	 5.77	 3.08	 1.86	 0.54] test loss i: [12.98	12.03	 5.74	 3.09	 1.89	 0.52] | 
+| 05-08 13:25:40 epoch: 006| time: 76.3s| train loss: +3.584e+01 | test loss: +3.882e+01 | 
+| 05-08 13:25:40 epoch: 006| train loss i: [12.54	12.03	 5.79	 3.08	 1.88	 0.53] test loss i: [15.27	12.12	 5.83	 3.14	 1.94	 0.51] | 
+| 05-08 13:26:56 epoch: 007| time: 76.2s| train loss: +3.462e+01 | test loss: +3.594e+01 | 
+| 05-08 13:26:56 epoch: 007| train loss i: [11.63	11.87	 5.72	 3.05	 1.85	 0.5 ] test loss i: [12.72	12.02	 5.82	 3.03	 1.84	 0.5 ] | 
+| 05-08 13:28:13 epoch: 008| time: 76.6s| train loss: +3.415e+01 | test loss: +3.788e+01 | 
+| 05-08 13:28:13 epoch: 008| train loss i: [11.25	11.79	 5.72	 3.04	 1.84	 0.52] test loss i: [14.56	12.17	 5.77	 3.04	 1.83	 0.5 ] | 
+| 05-08 13:29:29 epoch: 009| time: 76.2s| train loss: +3.375e+01 | test loss: +3.392e+01 | 
+| 05-08 13:29:29 epoch: 009| train loss i: [10.96	11.73	 5.69	 3.03	 1.84	 0.51] test loss i: [11.  	11.8 	 5.72	 3.02	 1.84	 0.54] | 

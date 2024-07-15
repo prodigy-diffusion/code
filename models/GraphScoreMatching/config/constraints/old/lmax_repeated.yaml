@@ -1,0 +1,7 @@
+constraint: Spectral Radius
+
+rounding: repeated
+max_samples: 10000
+
+params:
+  bound: 10

@@ -1,0 +1,387 @@
+| 05-12 04:19:05 EXPERIMENT BEGIN: 
+| 05-12 04:19:05 logging into exp/ego_small/edp-gnn_ego_small__May-12-04-19-05_3174277/sample/info.log
+| 05-12 04:19:05 load dataset: ego_small
+200
+| 05-12 04:19:44 model: EdgeDensePredictionGraphScoreNetwork(
+  (gnn_list): ModuleList(
+    (0): EdgeDensePredictionGNNLayer(
+      (multi_channel_gnn_module): GIN(
+        (linear_prediction): ModuleList(
+          (0): Sequential(
+            (0): Linear(in_features=3, out_features=32, bias=True)
+            (1): LeakyReLU(negative_slope=0.01)
+            (2): Linear(in_features=32, out_features=16, bias=True)
+          )
+          (1): Sequential(
+            (0): Linear(in_features=16, out_features=32, bias=True)
+            (1): LeakyReLU(negative_slope=0.01)
+            (2): Linear(in_features=32, out_features=16, bias=True)
+          )
+          (2): Sequential(
+            (0): Linear(in_features=16, out_features=32, bias=True)
+            (1): LeakyReLU(negative_slope=0.01)
+            (2): Linear(in_features=32, out_features=16, bias=True)
+          )
+          (3): Sequential(
+            (0): Linear(in_features=16, out_features=32, bias=True)
+            (1): LeakyReLU(negative_slope=0.01)
+            (2): Linear(in_features=32, out_features=16, bias=True)
+          )
+          (4): Sequential(
+            (0): Linear(in_features=16, out_features=32, bias=True)
+            (1): LeakyReLU(negative_slope=0.01)
+            (2): Linear(in_features=32, out_features=16, bias=True)
+          )
+        )
+        (layers): ModuleList(
+          (0): MLP(
+            (linears): ModuleList(
+              (0): Linear(in_features=6, out_features=32, bias=True)
+              (1): Linear(in_features=32, out_features=16, bias=True)
+            )
+          )
+          (1): MLP(
+            (linears): ModuleList(
+              (0): Linear(in_features=32, out_features=32, bias=True)
+              (1): Linear(in_features=32, out_features=16, bias=True)
+            )
+          )
+          (2): MLP(
+            (linears): ModuleList(
+              (0): Linear(in_features=32, out_features=32, bias=True)
+              (1): Linear(in_features=32, out_features=16, bias=True)
+            )
+          )
+          (3): MLP(
+            (linears): ModuleList(
+              (0): Linear(in_features=32, out_features=32, bias=True)
+              (1): Linear(in_features=32, out_features=16, bias=True)
+            )
+          )
+        )
+      )
+      (translate_mlp): MLP(
+        (linears): ModuleList(
+          (0): Linear(in_features=34, out_features=4, bias=True)
+          (1): Linear(in_features=4, out_features=4, bias=True)
+          (2): Linear(in_features=4, out_features=2, bias=True)
+        )
+        (batch_norms): ModuleList(
+          (0): BatchNorm1d(4, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): BatchNorm1d(4, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (cond_layers): ModuleList(
+          (0): ConditionalLayer1d()
+          (1): ConditionalLayer1d()
+        )
+      )
+    )
+    (1): EdgeDensePredictionGNNLayer(
+      (multi_channel_gnn_module): GIN(
+        (linear_prediction): ModuleList(
+          (0): Sequential(
+            (0): Linear(in_features=18, out_features=36, bias=True)
+            (1): LeakyReLU(negative_slope=0.01)
+            (2): Linear(in_features=36, out_features=16, bias=True)
+          )
+          (1): Sequential(
+            (0): Linear(in_features=16, out_features=36, bias=True)
+            (1): LeakyReLU(negative_slope=0.01)
+            (2): Linear(in_features=36, out_features=16, bias=True)
+          )
+          (2): Sequential(
+            (0): Linear(in_features=16, out_features=36, bias=True)
+            (1): LeakyReLU(negative_slope=0.01)
+            (2): Linear(in_features=36, out_features=16, bias=True)
+          )
+          (3): Sequential(
+            (0): Linear(in_features=16, out_features=36, bias=True)
+            (1): LeakyReLU(negative_slope=0.01)
+            (2): Linear(in_features=36, out_features=16, bias=True)
+          )
+          (4): Sequential(
+            (0): Linear(in_features=16, out_features=36, bias=True)
+            (1): LeakyReLU(negative_slope=0.01)
+            (2): Linear(in_features=36, out_features=16, bias=True)
+          )
+        )
+        (layers): ModuleList(
+          (0): MLP(
+            (linears): ModuleList(
+              (0): Linear(in_features=36, out_features=36, bias=True)
+              (1): Linear(in_features=36, out_features=16, bias=True)
+            )
+          )
+          (1): MLP(
+            (linears): ModuleList(
+              (0): Linear(in_features=32, out_features=36, bias=True)
+              (1): Linear(in_features=36, out_features=16, bias=True)
+            )
+          )
+          (2): MLP(
+            (linears): ModuleList(
+              (0): Linear(in_features=32, out_features=36, bias=True)
+              (1): Linear(in_features=36, out_features=16, bias=True)
+            )
+          )
+          (3): MLP(
+            (linears): ModuleList(
+              (0): Linear(in_features=32, out_features=36, bias=True)
+              (1): Linear(in_features=36, out_features=16, bias=True)
+            )
+          )
+        )
+      )
+      (translate_mlp): MLP(
+        (linears): ModuleList(
+          (0): Linear(in_features=34, out_features=8, bias=True)
+          (1): Linear(in_features=8, out_features=8, bias=True)
+          (2): Linear(in_features=8, out_features=4, bias=True)
+        )
+        (batch_norms): ModuleList(
+          (0): BatchNorm1d(8, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): BatchNorm1d(8, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (cond_layers): ModuleList(
+          (0): ConditionalLayer1d()
+          (1): ConditionalLayer1d()
+        )
+      )
+    )
+    (2): EdgeDensePredictionGNNLayer(
+      (multi_channel_gnn_module): GIN(
+        (linear_prediction): ModuleList(
+          (0): Sequential(
+            (0): Linear(in_features=20, out_features=40, bias=True)
+            (1): LeakyReLU(negative_slope=0.01)
+            (2): Linear(in_features=40, out_features=16, bias=True)
+          )
+          (1): Sequential(
+            (0): Linear(in_features=16, out_features=40, bias=True)
+            (1): LeakyReLU(negative_slope=0.01)
+            (2): Linear(in_features=40, out_features=16, bias=True)
+          )
+          (2): Sequential(
+            (0): Linear(in_features=16, out_features=40, bias=True)
+            (1): LeakyReLU(negative_slope=0.01)
+            (2): Linear(in_features=40, out_features=16, bias=True)
+          )
+          (3): Sequential(
+            (0): Linear(in_features=16, out_features=40, bias=True)
+            (1): LeakyReLU(negative_slope=0.01)
+            (2): Linear(in_features=40, out_features=16, bias=True)
+          )
+          (4): Sequential(
+            (0): Linear(in_features=16, out_features=40, bias=True)
+            (1): LeakyReLU(negative_slope=0.01)
+            (2): Linear(in_features=40, out_features=16, bias=True)
+          )
+        )
+        (layers): ModuleList(
+          (0): MLP(
+            (linears): ModuleList(
+              (0): Linear(in_features=80, out_features=40, bias=True)
+              (1): Linear(in_features=40, out_features=16, bias=True)
+            )
+          )
+          (1): MLP(
+            (linears): ModuleList(
+              (0): Linear(in_features=64, out_features=40, bias=True)
+              (1): Linear(in_features=40, out_features=16, bias=True)
+            )
+          )
+          (2): MLP(
+            (linears): ModuleList(
+              (0): Linear(in_features=64, out_features=40, bias=True)
+              (1): Linear(in_features=40, out_features=16, bias=True)
+            )
+          )
+          (3): MLP(
+            (linears): ModuleList(
+              (0): Linear(in_features=64, out_features=40, bias=True)
+              (1): Linear(in_features=40, out_features=16, bias=True)
+            )
+          )
+        )
+      )
+      (translate_mlp): MLP(
+        (linears): ModuleList(
+          (0): Linear(in_features=36, out_features=8, bias=True)
+          (1): Linear(in_features=8, out_features=8, bias=True)
+          (2): Linear(in_features=8, out_features=4, bias=True)
+        )
+        (batch_norms): ModuleList(
+          (0): BatchNorm1d(8, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): BatchNorm1d(8, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (cond_layers): ModuleList(
+          (0): ConditionalLayer1d()
+          (1): ConditionalLayer1d()
+        )
+      )
+    )
+    (3): EdgeDensePredictionGNNLayer(
+      (multi_channel_gnn_module): GIN(
+        (linear_prediction): ModuleList(
+          (0): Sequential(
+            (0): Linear(in_features=20, out_features=40, bias=True)
+            (1): LeakyReLU(negative_slope=0.01)
+            (2): Linear(in_features=40, out_features=16, bias=True)
+          )
+          (1): Sequential(
+            (0): Linear(in_features=16, out_features=40, bias=True)
+            (1): LeakyReLU(negative_slope=0.01)
+            (2): Linear(in_features=40, out_features=16, bias=True)
+          )
+          (2): Sequential(
+            (0): Linear(in_features=16, out_features=40, bias=True)
+            (1): LeakyReLU(negative_slope=0.01)
+            (2): Linear(in_features=40, out_features=16, bias=True)
+          )
+          (3): Sequential(
+            (0): Linear(in_features=16, out_features=40, bias=True)
+            (1): LeakyReLU(negative_slope=0.01)
+            (2): Linear(in_features=40, out_features=16, bias=True)
+          )
+          (4): Sequential(
+            (0): Linear(in_features=16, out_features=40, bias=True)
+            (1): LeakyReLU(negative_slope=0.01)
+            (2): Linear(in_features=40, out_features=16, bias=True)
+          )
+        )
+        (layers): ModuleList(
+          (0): MLP(
+            (linears): ModuleList(
+              (0): Linear(in_features=80, out_features=40, bias=True)
+              (1): Linear(in_features=40, out_features=16, bias=True)
+            )
+          )
+          (1): MLP(
+            (linears): ModuleList(
+              (0): Linear(in_features=64, out_features=40, bias=True)
+              (1): Linear(in_features=40, out_features=16, bias=True)
+            )
+          )
+          (2): MLP(
+            (linears): ModuleList(
+              (0): Linear(in_features=64, out_features=40, bias=True)
+              (1): Linear(in_features=40, out_features=16, bias=True)
+            )
+          )
+          (3): MLP(
+            (linears): ModuleList(
+              (0): Linear(in_features=64, out_features=40, bias=True)
+              (1): Linear(in_features=40, out_features=16, bias=True)
+            )
+          )
+        )
+      )
+      (translate_mlp): MLP(
+        (linears): ModuleList(
+          (0): Linear(in_features=36, out_features=8, bias=True)
+          (1): Linear(in_features=8, out_features=8, bias=True)
+          (2): Linear(in_features=8, out_features=4, bias=True)
+        )
+        (batch_norms): ModuleList(
+          (0): BatchNorm1d(8, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): BatchNorm1d(8, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (cond_layers): ModuleList(
+          (0): ConditionalLayer1d()
+          (1): ConditionalLayer1d()
+        )
+      )
+    )
+    (4): EdgeDensePredictionGNNLayer(
+      (multi_channel_gnn_module): GIN(
+        (linear_prediction): ModuleList(
+          (0): Sequential(
+            (0): Linear(in_features=20, out_features=40, bias=True)
+            (1): LeakyReLU(negative_slope=0.01)
+            (2): Linear(in_features=40, out_features=16, bias=True)
+          )
+          (1): Sequential(
+            (0): Linear(in_features=16, out_features=40, bias=True)
+            (1): LeakyReLU(negative_slope=0.01)
+            (2): Linear(in_features=40, out_features=16, bias=True)
+          )
+          (2): Sequential(
+            (0): Linear(in_features=16, out_features=40, bias=True)
+            (1): LeakyReLU(negative_slope=0.01)
+            (2): Linear(in_features=40, out_features=16, bias=True)
+          )
+          (3): Sequential(
+            (0): Linear(in_features=16, out_features=40, bias=True)
+            (1): LeakyReLU(negative_slope=0.01)
+            (2): Linear(in_features=40, out_features=16, bias=True)
+          )
+          (4): Sequential(
+            (0): Linear(in_features=16, out_features=40, bias=True)
+            (1): LeakyReLU(negative_slope=0.01)
+            (2): Linear(in_features=40, out_features=16, bias=True)
+          )
+        )
+        (layers): ModuleList(
+          (0): MLP(
+            (linears): ModuleList(
+              (0): Linear(in_features=80, out_features=40, bias=True)
+              (1): Linear(in_features=40, out_features=16, bias=True)
+            )
+          )
+          (1): MLP(
+            (linears): ModuleList(
+              (0): Linear(in_features=64, out_features=40, bias=True)
+              (1): Linear(in_features=40, out_features=16, bias=True)
+            )
+          )
+          (2): MLP(
+            (linears): ModuleList(
+              (0): Linear(in_features=64, out_features=40, bias=True)
+              (1): Linear(in_features=40, out_features=16, bias=True)
+            )
+          )
+          (3): MLP(
+            (linears): ModuleList(
+              (0): Linear(in_features=64, out_features=40, bias=True)
+              (1): Linear(in_features=40, out_features=16, bias=True)
+            )
+          )
+        )
+      )
+      (translate_mlp): MLP(
+        (linears): ModuleList(
+          (0): Linear(in_features=36, out_features=8, bias=True)
+          (1): Linear(in_features=8, out_features=8, bias=True)
+          (2): Linear(in_features=8, out_features=2, bias=True)
+        )
+        (batch_norms): ModuleList(
+          (0): BatchNorm1d(8, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): BatchNorm1d(8, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+        (cond_layers): ModuleList(
+          (0): ConditionalLayer1d()
+          (1): ConditionalLayer1d()
+        )
+      )
+    )
+  )
+  (final_read_score): MLP(
+    (linears): ModuleList(
+      (0): Linear(in_features=18, out_features=36, bias=True)
+      (1): Linear(in_features=36, out_features=36, bias=True)
+      (2): Linear(in_features=36, out_features=1, bias=True)
+    )
+    (cond_layers): ModuleList(
+      (0): ConditionalLayer1d()
+      (1): ConditionalLayer1d()
+    )
+  )
+)
+| 05-12 04:30:48 MMD_full ego_small_[0.1, 0.2, 0.4, 0.6, 0.8, 1.6].pth-proj-1.0-fixed1 128: {'degree': 0.180232, 'cluster': 0.575853, 'orbit': 0.01065, 'spectral': 0.096201}
+| 05-12 04:35:34 MMD_full ego_small_[0.1, 0.2, 0.4, 0.6, 0.8, 1.6].pth-proj-1.0-fixed1 128: {'degree': 0.017349, 'cluster': 0.007237, 'orbit': 0.003743, 'spectral': 0.022872}
+| 05-12 04:40:31 MMD_full ego_small_[0.1, 0.2, 0.4, 0.6, 0.8, 1.6].pth-proj-1.0-fixed1 128: {'degree': 0.179073, 'cluster': 0.575853, 'orbit': 0.0125, 'spectral': 0.1052}
+| 05-12 04:45:55 MMD_full ego_small_[0.1, 0.2, 0.4, 0.6, 0.8, 1.6].pth-proj-1.0-fixed1 128: {'degree': 0.021347, 'cluster': 0.033797, 'orbit': 0.012194, 'spectral': 0.031113}
+| 05-12 04:53:24 MMD_full ego_small_[0.1, 0.2, 0.4, 0.6, 0.8, 1.6].pth-proj-1.0-fixed1 128: {'degree': 0.04622, 'cluster': 0.099491, 'orbit': 0.010869, 'spectral': 0.040609}
+| 05-12 05:00:16 MMD_full ego_small_[0.1, 0.2, 0.4, 0.6, 0.8, 1.6].pth-proj-1.0-fixed1 128: {'degree': 0.076843, 'cluster': 0.096683, 'orbit': 0.019397, 'spectral': 0.03505}
+| 05-12 05:00:16 best_config ego_small_[0.1, 0.2, 0.4, 0.6, 0.8, 1.6].pth-proj-1.0-fixed1 iter: {'step_size_ratio': 0.05, 'eps': 1.0, 'best_batch_mmd': {'degree': 0.017349, 'cluster': 0.007237, 'orbit': 0.003743, 'spectral': 0.022872}}
+| 05-12 05:34:07 MMD_full ego_small_[0.1, 0.2, 0.4, 0.6, 0.8, 1.6].pth-proj-1.0-fixed1 1024: {'degree': 0.014249, 'cluster': 0.018462, 'orbit': 0.002888, 'spectral': 0.020584}

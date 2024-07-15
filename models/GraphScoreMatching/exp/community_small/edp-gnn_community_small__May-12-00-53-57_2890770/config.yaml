@@ -1,0 +1,70 @@
+dataset:
+  dataset_size: 100
+  max_node_num: 20
+  name: community_small
+dev: !!python/object/apply:torch.device
+- cuda
+- 0
+exp_dir: exp
+exp_name: community_small
+folder_name: edp-gnn_community_small__May-12-00-53-57_2890770
+mcmc:
+  eps:
+  - 0.5
+  fixed_node_number: true
+  grad_step_size:
+  - 0.01
+  - 0.001
+  name: langevin
+  step_num: 1000
+model:
+  models:
+    model_1:
+      channel_num_list:
+      - 2
+      - 4
+      - 4
+      - 4
+      - 2
+      dropout_p: 0.0
+      feature_nums:
+      - 16
+      - 16
+      - 16
+      - 16
+      - 16
+      gnn_hidden_num_list:
+      - 16
+      - 16
+      - 16
+      - 16
+      name: gin
+      use_norm_layers: false
+  name: edp-gnn
+  stack_num: 1
+model_save_dir: exp/community_small/edp-gnn_community_small__May-02-00-20-27_503866/models
+run_id: '2890770'
+sample:
+  batch_size: 128
+save_dir: exp/community_small/edp-gnn_community_small__May-12-00-53-57_2890770
+seed: 42
+test:
+  batch_size: 128
+  split: 0.2
+train:
+  batch_size: 128
+  lr_dacey: 0.99
+  lr_init: 0.001
+  max_epoch: 5001
+  momentum: 0.9
+  sample_interval: 2500
+  save_interval: 2500
+  shuffle: true
+  sigmas:
+  - 0.1
+  - 0.2
+  - 0.4
+  - 0.6
+  - 0.8
+  - 1.6
+  weight_decay: 0.0

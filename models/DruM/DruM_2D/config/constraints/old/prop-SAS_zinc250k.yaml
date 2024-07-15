@@ -1,0 +1,19 @@
+add_diff_step: 0
+burnin: 0
+constraint: Property-SGC
+max_samples: 10000
+method:
+  gamma: 1.0
+  op: proj
+  solve_order: cpj
+params:
+- sgc2_zinc250k_SAS.pt
+- 7.289282840617412
+rounding: none
+schedule:
+  gamma: poly
+  params:
+  - 0.1
+  - 5
+implicit: false
+eq: false

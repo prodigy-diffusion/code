@@ -1,0 +1,18 @@
+community_small:
+  budget: [20, 30, 50, 60, 70] #[50, 100] #[10, 20, 50, 100]
+  adj0: ["zeros"]
+grid:
+  budget: [10, 20, 50, 100]
+  adj0: ["zeros"]
+ego_small:
+  budget: [10, 20, 50, 100]
+  adj0: ["zeros"]
+enzymes:
+  budget: [10, 20, 50, 100]
+  adj0: ["zeros"]
+qm9:
+  budget: [10, 20, 50, 100]
+  adj0: ["zeros"]
+zinc250k:
+  budget: [10, 20, 50, 100]
+  adj0: ["zeros"]

@@ -1,0 +1,36 @@
+add_diff_step: 0
+burnin: 0
+constraint: Num-Edges-EQ
+max_samples: 10000
+method:
+  gamma: 1.0
+  op: proj
+  solve_order: cpj
+params:
+- zeros
+- - 27
+  - 27
+  - 27
+  - 60
+  - 61
+  - 21
+  - 21
+  - 60
+  - 60
+  - 49
+  - 23
+  - 63
+  - 61
+  - 60
+  - 49
+  - 26
+  - 60
+  - 62
+  - 49
+  - 21
+rounding: none
+schedule:
+  gamma: poly
+  params:
+  - 0
+  - 1

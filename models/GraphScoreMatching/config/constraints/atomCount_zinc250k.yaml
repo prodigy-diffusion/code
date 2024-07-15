@@ -1,0 +1,18 @@
+add_diff_step: 0
+burnin: 0
+constraint: Atom-Count
+max_samples: 10000
+method:
+  gamma: 1.0
+  op: proj
+  solve_order: cpj
+params:
+- [36, 0, 3, 0, 0, 0, 0, 0, 0]
+rounding: none
+schedule:
+  gamma: poly
+  params:
+  - 0.1
+  - 5
+implicit: false
+eq: false

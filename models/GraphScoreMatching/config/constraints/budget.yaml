@@ -1,0 +1,21 @@
+constraint: Budget-adj
+
+method:
+  op: proj
+  gamma: 1.0
+  solve_order: cpj
+
+burnin: 0
+rounding: none
+max_samples: 10000
+add_diff_step: 500  #500
+
+params:
+  adj0: zeros # number of edges
+  budget: 70  # 20 is the highest number of nodes.
+
+schedule:
+  gamma: poly
+  params:
+  - 0.01
+  - 5

@@ -1,0 +1,70 @@
+dataset:
+  dataset_size: 100
+  max_node_num: 361
+  name: grid
+dev: !!python/object/apply:torch.device
+- cuda
+- 2
+exp_dir: exp
+exp_name: grid
+folder_name: edp-gnn_grid__May-13-05-55-30_189879
+mcmc:
+  eps:
+  - 0.5
+  fixed_node_number: true
+  grad_step_size:
+  - 0.01
+  - 0.005
+  - 0.001
+  name: langevin
+  step_num: 1000
+model:
+  models:
+    model_1:
+      channel_num_list:
+      - 2
+      - 4
+      - 4
+      - 4
+      - 2
+      dropout_p: 0.0
+      feature_nums:
+      - 16
+      - 16
+      - 16
+      - 16
+      - 16
+      gnn_hidden_num_list:
+      - 16
+      - 16
+      - 16
+      - 16
+      name: gin
+      use_norm_layers: false
+  name: edp-gnn
+  stack_num: 1
+model_save_dir: exp/grid/models
+run_id: '189879'
+sample:
+  batch_size: 8
+save_dir: exp/grid/edp-gnn_grid__May-13-05-55-30_189879
+seed: 42
+test:
+  batch_size: 8
+train:
+  batch_size: 1024
+  lr_dacey: 0.999
+  lr_init: 0.001
+  max_epoch: 300
+  momentum: 0.9
+  sample_interval: 8
+  save_interval: 300
+  shuffle: true
+  sigmas:
+  - 0.1
+  - 0.2
+  - 0.4
+  - 0.6
+  - 0.8
+  - 1.6
+  weight_decay: 0.0

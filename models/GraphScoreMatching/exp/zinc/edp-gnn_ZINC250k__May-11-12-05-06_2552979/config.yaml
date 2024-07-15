@@ -1,0 +1,70 @@
+dataset:
+  dataset_size: 0
+  max_node_num: 38
+  name: ZINC250k
+dev: !!python/object/apply:torch.device
+- cuda
+- 4
+exp_dir: exp
+exp_name: zinc
+folder_name: edp-gnn_ZINC250k__May-11-12-05-06_2552979
+mcmc:
+  eps:
+  - 0.5
+  fixed_node_number: true
+  grad_step_size:
+  - 0.01
+  - 0.005
+  - 0.001
+  name: langevin
+  step_num: 1000
+model:
+  models:
+    model_1:
+      channel_num_list:
+      - 2
+      - 4
+      - 4
+      - 4
+      - 2
+      dropout_p: 0.0
+      feature_nums:
+      - 16
+      - 16
+      - 16
+      - 16
+      - 16
+      gnn_hidden_num_list:
+      - 16
+      - 16
+      - 16
+      - 16
+      name: gin
+      use_norm_layers: false
+  name: edp-gnn
+  stack_num: 1
+model_save_dir: exp/zinc/edp-gnn_zinc__May-08-13-30-52_3881078/models
+run_id: '2552979'
+sample:
+  batch_size: 10000
+save_dir: exp/zinc/edp-gnn_ZINC250k__May-11-12-05-06_2552979
+seed: 42
+test:
+  batch_size: 10000
+train:
+  batch_size: 1024
+  lr_dacey: 0.999
+  lr_init: 0.001
+  max_epoch: 300
+  momentum: 0.9
+  sample_interval: 10000
+  save_interval: 300
+  shuffle: true
+  sigmas:
+  - 0.1
+  - 0.2
+  - 0.4
+  - 0.6
+  - 0.8
+  - 1.6
+  weight_decay: 0.0

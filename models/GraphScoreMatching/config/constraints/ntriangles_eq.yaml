@@ -1,0 +1,35 @@
+add_diff_step: 0
+burnin: 0
+constraint: Num-Triangles-EQ
+max_samples: 10000
+method:
+  gamma: 1.0
+  op: proj
+  solve_order: cpj
+params:
+- - 33
+  - 33
+  - 33
+  - 189
+  - 189
+  - 30
+  - 30
+  - 189
+  - 189
+  - 159
+  - 30
+  - 189
+  - 189
+  - 189
+  - 159
+  - 33
+  - 189
+  - 189
+  - 159
+  - 30
+rounding: none
+schedule:
+  gamma: poly
+  params:
+  - 0
+  - 1

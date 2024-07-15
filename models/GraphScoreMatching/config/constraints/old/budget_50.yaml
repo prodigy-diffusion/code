@@ -1,0 +1,9 @@
+constraint: Budget-adj
+
+rounding: randomized
+max_samples: 10000
+add_diff_step: 500
+
+params:
+  adj0: zeros # number of edges
+  budget: 50 # 20 is the highest number of nodes.

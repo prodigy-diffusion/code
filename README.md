@@ -42,7 +42,7 @@ python prodigy.py --model {model_name} --dataset {dataset_name} --constraint con
 
 
 ## Pre-trained Diffusion Model
-We are given a graph diffusion model pre-trained on the unconditional task of matching the underlying distribution. We use the released checkpoints for each model and dataset if released by the authors or have trained our own. These can be accessed through the repositories of the corresponding models while we provide the config files for the experiments here. Checkpoints of each model used for the experiments will be released [here]() soon. 
+We are given a graph diffusion model pre-trained on the unconditional task of matching the underlying distribution. We use the released checkpoints for each model and dataset if released by the authors or have trained our own. These can be accessed through the repositories of the corresponding models while we provide the config files for the experiments here. Checkpoints of each model used for the experiments have been added in respective folders. 
 
 
 ## Constraint specification

@@ -1,0 +1,23 @@
+add_diff_step: 0
+burnin: 0
+constraint: Mol-Weight
+max_samples: 10000
+method:
+  gamma: 1.0
+  op: proj
+  solve_order: cpj
+rounding: none
+schedule:
+  gamma:
+  - poly
+  - poly
+  - poly
+  - poly
+  params:
+  - 0
+  - 0.1
+params:
+- [12.0106, 14.006855, 15.9994, 18.998403163]
+- 74.25
+implicit: false
+eq: false

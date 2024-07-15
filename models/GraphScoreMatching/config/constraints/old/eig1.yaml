@@ -1,0 +1,13 @@
+constraint: Eigenvalue Box
+
+rounding: randomized
+max_samples: 10000
+
+params:
+  index: 1
+  lbound: 1
+  ubound: 1000
+method:
+  op: proj
+  gamma: 1.0
+add_diff_step: 1000

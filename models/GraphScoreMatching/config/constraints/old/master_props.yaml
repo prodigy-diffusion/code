@@ -1,0 +1,9 @@
+qm9:
+  - sgc2_qm9_gap
+  - sgc2_qm9_homo
+  - sgc2_qm9_lumo
+zinc250k:
+  - sgc2_zinc250k_qed
+  - sgc2_zinc250k_SAS
+  - sgc2_zinc250k_logP
+  

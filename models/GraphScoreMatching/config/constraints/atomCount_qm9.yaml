@@ -1,0 +1,21 @@
+add_diff_step: 0
+burnin: 0
+constraint: Atom-Count
+max_samples: 10000
+method:
+  gamma: 1.0
+  op: proj
+  solve_order: cpj
+  jacobian: false
+  density_lambda: 0.0
+  last_score: false
+rounding: none
+schedule:
+  gamma: exp-dist
+  params:
+  - 0
+  - 10000
+params:
+- [9, 9, 0, 0]
+implicit: false
+eq: false

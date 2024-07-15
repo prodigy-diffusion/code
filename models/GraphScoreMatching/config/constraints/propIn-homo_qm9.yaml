@@ -1,0 +1,19 @@
+add_diff_step: 0
+burnin: 0
+constraint: Property-SGC-In
+max_samples: 10000
+method:
+  gamma: 1.0
+  op: proj
+  solve_order: cpj
+params:
+- sgc2_qm9_homo.pt
+- -1.2605
+- 0.7395
+rounding: none
+schedule:
+  gamma: fixed
+  params:
+  - 0
+implicit: false
+eq: false

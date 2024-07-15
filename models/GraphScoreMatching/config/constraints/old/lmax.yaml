@@ -1,0 +1,13 @@
+constraint: Spectral Radius
+
+rounding: randomized
+max_samples: 10000
+
+method:
+  op: proj
+  gamma: 1.0
+
+add_diff_step: 1000
+
+params:
+  bound: 15

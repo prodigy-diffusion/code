@@ -1,0 +1,7 @@
+constraint: Rank
+
+rounding: randomized
+max_samples: 10000
+
+params:
+  bound: 10

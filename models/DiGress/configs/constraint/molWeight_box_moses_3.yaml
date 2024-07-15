@@ -1,0 +1,23 @@
+add_diff_step: 0
+burnin: 0
+constraint: Mol-Weight
+max_samples: 10000
+method:
+  gamma: 1.0
+  op: proj
+  solve_order: cpj
+  jacobian: false
+  density_lambda: 0.0
+  last_score: false
+rounding: none
+schedule:
+  gamma: exp-dist
+  params:
+  - 0
+  - 1.0
+params:
+- [12.0106, 14.0069, 32.0675, 15.9994, 18.9984, 35.4515, 79.9040, 1.0000]
+- 224.1
+- 296.19
+implicit: false
+eq: false

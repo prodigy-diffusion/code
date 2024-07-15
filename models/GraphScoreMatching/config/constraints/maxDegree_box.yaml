@@ -1,0 +1,21 @@
+add_diff_step: 0
+burnin: 0
+constraint: Max-Degree-Box
+max_samples: 10000
+method:
+  gamma: 1.0
+  op: proj
+  solve_order: cpj
+  jacobian: false
+  density_lambda: 0.0
+  last_score: true
+params:
+- 2.5
+- 3.75
+rounding: none
+schedule:
+  gamma: fixed
+  params:
+  - 1
+implicit: false
+eq: false

@@ -1,0 +1,3 @@
+| 05-12 07:48:45 EXPERIMENT BEGIN: 
+| 05-12 07:48:45 logging into exp/grid/edp-gnn_grid__May-12-07-48-45_3643656/sample/info.log
+| 05-12 07:48:45 load dataset: {"graph_type": "grid", "possible_params_dict": {"m": [10, 11, 12, 13, 14, 15, 16, 17, 18, 19], "n": [10, 11, 12, 13, 14, 15, 16, 17, 18, 19]}, "corrupt_func": null, "length": 100, "save_dir": "data", "file_name": "grid", "max_node": null, "min_node": null}max node number: 361

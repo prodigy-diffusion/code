@@ -1,32 +1,29 @@
-
 # the output files will be stored in the directory <exp_dir>/<exp_name>
 exp_dir: exp
 exp_name: ego_small
 
-seed: 1234
+seed: 42
 
 # where to find the saved models (you need to edit the path)
-model_save_dir: 'exp/ego_small/edp-gnn_ego_small_xxx/models'
+model_save_dir: 'exp/ego_small/edp-gnn_ego_small__May-02-00-21-22_504567/models'
 
 # uncomment it to save the output files to `save_dir` instead of creating a new directory
-#save_dir: 'exp/ego_small/edp-gnn_ego_small_xxx'
-
-
+save_dir: 'exp/ego_small'
 
 dataset:
   dataset_size: 200  # the maximal loaded dataset size
   max_node_num: 18
+  max_feat_num: 2
   name: ego_small  # name of the dataset, the pickle file should be data/<name>.pkl
 
 mcmc:  # hyper parameters in the Langevin MC sampling
-  eps:
-  - 0.1
-  - 1.0
+  eps: 0.5 # - 0.1 - 1.0
   fixed_node_number: true
   grad_step_size:
-  - 0.05
-  - 0.005
-  - 0.0005
+  - 0.001
+  # - 0.05
+  # - 0.005
+  # - 0.0005
   name: langevin
   step_num: 1000
 model:
@@ -56,14 +53,14 @@ model:
   stack_num: 1
 
 sample:
-  batch_size: 32
+  batch_size: 128
 
 test:
-  batch_size: 32
+  batch_size: 128
   split: 0.2
 
 train:
-  batch_size: 32
+  batch_size: 128
 
   lr_dacey: 0.99
   lr_init: 0.001
